@@ -1,0 +1,168 @@
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+  background-image: url('../photo/2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+  
+.text1{
+    text-align: center;
+    font: 1.3em sans-serif;
+}
+
+.border1 {
+    padding: 1.25rem; 
+    border: 1px solid #e5e7eb; 
+    width: 30%; 
+    height: 60%;
+    min-width: 500px;
+    margin: 0 auto; 
+    border-radius: 0.375rem; 
+    margin-top: 1.25rem;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 150px;
+  }
+ 
+.form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    align-items: center;
+    position: relative;
+    top: 20px;
+  }
+  
+.button1 {
+    display: flex;
+    gap: 0.5rem; 
+    margin-top: 1.75rem; 
+  }
+  
+  .button1 button {
+    background-color: #4ca5d5;
+    color: aliceblue;
+    padding: 0.85rem 1.8rem; 
+    border-radius: 0.375rem; 
+    cursor: pointer; 
+  }
+  
+  .button1 button:hover {
+    background-color: #2560eb;
+  }
+
+  .register-link{
+    position: relative;
+    top: 15px;
+  }
+
+
+.label1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .label1 .label-text {
+    display: block;
+    font-size: 1rem; 
+    font-weight: 300px; 
+    color: #4b5563;
+    position: relative;
+    right: 70px; 
+  }
+  
+  .label1 input {
+    width: 200%; 
+    max-width: 20rem; 
+    height: 44px;
+    border: 1px solid #c7cdd8;
+    border-radius: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m3.5 5.5 7.9 6c.4.3.8.3 1.2 0l7.9-6M4 19h16c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1H4a1 1 0 0 0-1 1v12c0 .6.4 1 1 1Z"/></svg>');
+    background-position: right 5px center;
+    background-repeat: no-repeat;
+    position: relative;
+    right: 70px;
+  }
+  
+  .label1 input:focus {
+    border-color: #b3b7c1;
+    box-shadow: 0 0 0 2px rgba(180, 187, 202, 0.2); 
+    outline: none;
+  }
+
+.label2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label2 .label-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    right: 64px;
+    top: 10px;
+  }
+  
+  .input2 {
+    width: 200%;
+    max-width: 20rem;
+    height: 43px;
+    border: 1px solid #c7cdd8;
+    border-radius: 5px;
+    padding: 0.5rem;
+    position: relative;
+    right: 64px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H7a1 1 0 0 1-1-1v-7c0-.6.4-1 1-1Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+  }
+  
+  .input2:focus {
+    outline: none;
+    border-color: #b3b7c1;
+    box-shadow: 0 0 0 2px rgba(180, 187, 202, 0.2);
+  }
+  
+  .background-container1 {
+    background-image: url('../photo/2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 150vh;
+  }
+
+  .border2 {
+    padding: 5px;
+    border: 1px solid #e2e8f0; 
+    position: relative;
+    top: 80px;
+    left: 25%;
+    width: 50%; 
+    height: 750px;
+    background-color: whitesmoke;
+}
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem; 
+    align-items: center;
+    position: relative;
+    top: 10px;
+    height: 100px;
+  }
+
+  .login-link{
+    position: relative;
+    top: 30px;
+    right: 5px;
+  }
+  

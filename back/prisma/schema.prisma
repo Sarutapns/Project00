@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+enum Role {
+    USER 
+}
+
+model User {
+    id          Int      @id @default(autoincrement())
+    role        Role     @default(USER)
+    name        String  
+    address     String
+    phone       String?
+    email       String   @unique
+    password    String
+    rent        Rent[]
+    reviews     Reviews[]
+}
+
+model Rent {
+    id           Int       @id @default(autoincrement())
+    rentDate     DateTime  @default(now()) @map("rent_date")
+    serviceDate  DateTime  @default(now()) @map("service_date")
+    status       String
+    user         User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    userId       Int       @map("user_id")
+    dresses      Dresses   @relation(fields: [dressesId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    dressesId    Int       @map("dresses_id")
+    payment      Payment[]
+
+}
+model Reviews {
+    id           Int       @id @default(autoincrement())
+    comment      String    
+    user         User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    userId       Int       @map("user_id")
+    dresses      Dresses   @relation(fields: [dressesId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    dressesId    Int       @map("dresses_id")
+}
+
+model Dresses {
+    id           Int        @id @default(autoincrement())
+    dressesName  String     @map("dresses_name")
+    dressesType  String     @map("dresses_type")
+    color        String     
+    size         String
+    price        Int
+    reviews      Reviews[]
+    calender     Calender[]
+    rent         Rent[]
+
+}
+
+model Payment {
+    id            Int         @id @default(autoincrement())
+    paymentDate   DateTime    @map("payment_date")
+    paymentAmount Int         @map("payment_amout")
+    rent          Rent        @relation(fields: [rentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    rentId        Int         @map("rent_id")
+}
+
+model Calender {
+    id            Int        @id @default(autoincrement())
+    availableDate DateTime   @map("availble_date")
+    dresses       Dresses    @relation(fields: [dressesId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    dressesId     Int        @map("dresses_id") 
+}
+
+
+
+
